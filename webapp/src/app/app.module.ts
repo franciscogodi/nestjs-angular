@@ -5,6 +5,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { IconsModule } from './modules/icons/icons.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,9 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
+    IconsModule,
   ],
   bootstrap: [AppComponent],
+  exports: [IconsModule],
 })
 export class AppModule {}

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { IconsModule } from '../icons/icons.module';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserComponent } from './components/user/user.component';
 import { MainComponent } from './pages/main/main.component';
@@ -19,6 +20,7 @@ import { UsersRoutingModule } from './users-routing.module';
     ReactiveFormsModule,
     StoreModule.forFeature(usersFeatureKey, usersReducer),
     EffectsModule.forFeature([UserEffects]),
+    IconsModule,
   ],
 })
 export class UsersModule {}
